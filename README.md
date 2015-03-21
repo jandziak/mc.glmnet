@@ -1,8 +1,8 @@
 # README #
 
-### What is this repository for? ###
+### Multi Core glmnet computation ###
 
-Package **/mc.glmnet**
+Package **mc.glmnet**
 
 * is **R** package for multi core glmnet calculation
 * provides estimation of parameters for L1 penalised models

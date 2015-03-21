@@ -11,8 +11,6 @@
 #' @return Fitted glmnet models for generated data
 mcmm.glmnet <- function(FUN, ..., family = "binomial"){
    data <- FUN(...)
-   index <- 1:ncol(data$X)
-   names <- paste("data$X[,", -index, "]", sep = "")
-   modele <- mclapply(names, function(x) glmnet(eval(parse(text = x)), data$Y, family = "binomial", alpha = 1))
-   return(modele)
+   modele <- mclapply(1:ncol(data$X), function(i) glmnet(data$X[, -i], data$Y, family = "binomial", alpha = 1))
+   return(modele)return(modele)
 } 

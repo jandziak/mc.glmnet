@@ -1,3 +1,7 @@
+[<img src="http://www.ideal.rwth-aachen.de/wp-content/uploads/2013/08/banner1.png">](http://www.ideal.rwth-aachen.de/)
+
+------------------
+
 # README #
 
 ### Multi Core glmnet computation ###

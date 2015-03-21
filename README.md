@@ -1,5 +1,4 @@
-[<img src="http://www.ideal.rwth-aachen.de/wp-content/uploads/2013/08/banner1.png">](http://www.ideal.rwth-aachen.de/)
-
+[<img src="https://1-ps.googleusercontent.com/sxk/lUi00NOiZZtaYcm5-HDw_Ypz0k/s.google-melange.appspot.com/www.google-melange.com/soc/content/2-1-20150317/images/gsoc/logo/banner-gsoc2015.png.pagespeed.ce.1-XG35qq3RTWtP5DKeyX.png">](https://www.google-melange.com/gsoc/homepage/google/gsoc2015)
 ------------------
 
 # README #

@@ -9,7 +9,7 @@
 #' @param family a parameter that controls the type of model to be fitted. 
 #' @export
 #' @return Fitted glmnet models for generated data
-mcmm.glmnet <- function(FUN, ...){
+mcmm.glmnet <- function(FUN, ..., family = "binomial"){
    data <- FUN(...)
    index <- 1:ncol(data$X)
    names <- paste("data$X[,", -index, "]", sep = "")

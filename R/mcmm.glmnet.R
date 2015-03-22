@@ -12,5 +12,5 @@
 mcmm.glmnet <- function(FUN, ..., family = "binomial"){
    data <- FUN(...)
    modele <- mclapply(1:ncol(data$X), function(i) glmnet(data$X[, -i], data$Y, family = "binomial", alpha = 1))
-   return(modele)return(modele)
+   return(modele)
 } 

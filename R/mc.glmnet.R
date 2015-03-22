@@ -41,8 +41,12 @@
 #' probs <- round(1/(1+(exp(-data$X%*%beta))),digits=4)
 #' data$Y <- rbinom(n,1,probs)
 #' return(data)}
+#' sm.glmnet(graph.data.generate)
+#' sm.glmnet(graph.data.generate, p = 500, n = 50)
+#' sm.glmnet(graph.data.generate, fraction = 0.05 ,p = 500, n = 100)
 #' mcmm.glmnet(graph.data.generate)
 #' mcmm.glmnet(graph.data.generate, p = 500, n = 50)
 #' mcmm.glmnet(graph.data.generate, fraction = 0.05 ,p = 500, n = 100)
+#' 
 #' }
 NULL

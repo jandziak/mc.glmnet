@@ -1,0 +1,16 @@
+{
+    "contents" : "#' Single Model glmnet model fitting\n#'\n#' Performs fitting simple L1 penalized model of choosen type for generated data.\n#'\n#' @param FUN a function of appropriate form to generate data to fit the model\n#' @param ... a parameters to be passed in function\n#' @param family a parameter that controls the type of model to be fitted. \n#' @export\n#' @return Fitted glmnet model for generated data\nsm.glmnet  <- function(FUN, ..., family = \"binomial\"){\n   data <- FUN(...)\n   model <- glmnet(data$X, data$Y, family = family, alpha = 1)\n   return(model)\n}",
+    "created" : 1426985260380.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3707652845",
+    "id" : "E03B5ED8",
+    "lastKnownWriteTime" : 1426945590,
+    "path" : "C:/Users/Math/mc.glmnet/R/sm.glmnet.R",
+    "project_path" : "R/sm.glmnet.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

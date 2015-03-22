@@ -1,0 +1,16 @@
+{
+    "contents" : "#' Multiple Core Multiple Model glmnet models fitting\n#'\n#' Performs fitting simple L1 penalized models of choosen type foor generated data. \n#' Data set with n observations and p predictors is constructed.\n#' Models are fitted for each p-1 predictors using multi core lapply function.\n#'\n#' @param FUN a function of appropriate form to generate data to fit the model\n#' @param ... a parameters to be passed in function\n#' @param family a parameter that controls the type of model to be fitted. \n#' @export\n#' @return Fitted glmnet models for generated data\nmcmm.glmnet <- function(FUN, ..., family = \"binomial\"){\n   data <- FUN(...)\n   modele <- mclapply(1:ncol(data$X), function(i) glmnet(data$X[, -i], data$Y, family = family, alpha = 1))\n   return(modele)\n} \n",
+    "created" : 1426985247003.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2135663857",
+    "id" : "99862146",
+    "lastKnownWriteTime" : 1426985256,
+    "path" : "C:/Users/Math/mc.glmnet/R/mcmm.glmnet.R",
+    "project_path" : "R/mcmm.glmnet.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

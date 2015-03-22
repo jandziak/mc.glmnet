@@ -1,0 +1,16 @@
+{
+    "contents" : "Package: mc.glmnet\nType: Package\nTitle: Multiple Core Multiple Model glmnet calculations\nVersion: 0.1.1\nDate: 2015-03-21\nAuthor: Jan Idziak\nMaintainer: Jan Idziak <JanIdziak@gmail.com>\nDescription: Package mc.glmnet performs fit of L1 penalised model to the data. It is introduction to solution for Graphical Gaussion Models precission matrix. There had been used parallel computing in order to reduce time of computations. \nLicense: GPL-3\nDepends:\n    R (>= 3.0.2)\nImports:\n    glmnet,\n    parallel",
+    "created" : 1426985712214.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3226646108",
+    "id" : "3198E50",
+    "lastKnownWriteTime" : 1426985727,
+    "path" : "C:/Users/Math/mc.glmnet/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "dcf"
+}

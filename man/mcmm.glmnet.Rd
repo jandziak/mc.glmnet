@@ -4,7 +4,7 @@
 \alias{mcmm.glmnet}
 \title{Multiple Core Multiple Model glmnet models fitting}
 \usage{
-mcmm.glmnet(FUN, ...)
+mcmm.glmnet(FUN, ..., family = "binomial")
 }
 \arguments{
 \item{FUN}{a function of appropriate form to generate data to fit the model}

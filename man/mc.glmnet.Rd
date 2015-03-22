@@ -30,10 +30,24 @@ in computation time, script available at http://www.stat.cmu.edu/~nmv/setup/mcla
 Version: 0.1.1
 }
 \examples{
-\dontrun{
-sim.data <- data.simulation(n = 50, SNR = 1, K = 3, numb.vars = 50, max.dim = 3)
-mlcc.bic(sim.data$X, numb.clusters = 1:5, numb.runs = 20)
-mlcc.reps(sim.data$X, numb.clusters = 3, numb.runs = 20)}
+\donttest{
+library(GeneNet)
+graph.data.generate <- function(seed = 42048, fraction = 0.1, p = 500, n = 50, b.values = rep(2,50)){
+set.seed(seed)
+data <- list()
+precision <- ggm.simulate.pcor(p, fraction)
+data$X <- ggm.simulate.data(n, precision)
+beta <- c(b.values, rep(0, times = p-length(b.values)))
+probs <- round(1/(1+(exp(-data$X\%*\%beta))), digits = 4)
+data$Y <- rbinom(n, 1, probs)
+return(data)}
+sm.glmnet(graph.data.generate)
+sm.glmnet(graph.data.generate, p = 500, n = 50)
+sm.glmnet(graph.data.generate, fraction = 0.05 ,p = 500, n = 100)
+mcmm.glmnet(graph.data.generate)
+mcmm.glmnet(graph.data.generate, p = 500, n = 50)
+mcmm.glmnet(graph.data.generate, fraction = 0.05 ,p = 500, n = 100)
+}
 }
 \author{
 Jan Idziak
